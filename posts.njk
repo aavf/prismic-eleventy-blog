@@ -1,0 +1,9 @@
+---
+pagination:
+  data: collections.posts
+  size: 1
+  alias: post
+  addAllPagesToCollections: true
+layout: layouts/post.njk
+permalink: posts/{{ post.data.url | slug }}/index.html
+---

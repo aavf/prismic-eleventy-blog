@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-post
+---
+<h1>{{ post.data.title }}</h1>
+
+{% for p in post.data.content %}
+  <p>{{ p.text }}</p>
+{% endfor %}
+
+
+<p><a href="{{ '/' | url }}">← Home</a></p>
