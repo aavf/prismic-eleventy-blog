@@ -53,7 +53,7 @@ module.exports = function(eleventyConfig) {
         );
     }).then(function (response) {
       // response is the response object, response.results holds the documents
-      console.log("Prismic posts: ", response.results[0].data.content);
+      //console.log("Prismic posts: ", response.results[0].data.content);
       return response.results;
     });
 
@@ -91,10 +91,10 @@ module.exports = function(eleventyConfig) {
   });
   eleventyConfig.setLibrary("md", markdownLibrary);
 
-  /* eleventyConfig.addFilter("markdownify", function(value) {
-    const md = new markdownIt(options)
+  eleventyConfig.addFilter("markdownify", function(value) {
+    const md = new markdownIt(markdownLibrary)
     return md.render(value)
-  }) */
+  })
 
   // Browsersync Overrides
   eleventyConfig.setBrowserSyncConfig({

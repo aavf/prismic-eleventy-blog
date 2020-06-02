@@ -1,11 +1,12 @@
 ---
 layout: layouts/base.njk
+title: {{ about.data.title }}
 templateClass: tmpl-post
 ---
-<h1>{{ post.data.title }}</h1>
+<h1>{{ about.data.title }}</h1>
 
-{% for p in post.data.content %}
-  <p>{{ p.text | markdownify | safe }}</p>
+{% for p in about.data.content %}
+  <p>{{ p.text }}</p>
 {% endfor %}
 
 
